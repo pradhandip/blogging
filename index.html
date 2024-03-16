@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>literaryeye</title>
+    <link rel="shortcut icon" href="src\img\fevicon\favicon.ico" type="image/x-icon">
+    <link rel="icon" href="src\img\fevicon\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icons li {
+            margin: 0;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }   
+        .social-icons a:hover {
+            color: #00aced;
+        }
+        .quick-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .quick-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .quick-links a:hover {
+            color: #00aced;
+        }
+        .contact-email {
+            margin-top: 20px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .contact-email a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .contact-email a:hover {
+            color: #00aced;
+        }
+        .email-icon {
+            margin-right: 5px;
+        }
+        .site-credit {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #ccc;
+        }
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-bar a {
+                margin: 10px 0;
+            }
+            .quick-links,
+            .contact-email {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- RESPONSIVE HEADER START -->
+    <div id="header_new">
+        <div id="new_nav">
+            <div class="logo_new">
+                <img src="src\img\menu_open.png" alt="menu" class="menu_icon" id="menu_icon_before"  >
+                <span class="logo-name" id="responsive_logo_name_before">Literaryeye.com</span>
+            </div> 
+            <div class="sidebar">
+                <div class="logo_new">
+                  <img src="src\img\menu_close.png" alt="menu" class="menu_icon" id="menu_icon_after" style="margin-right: 0%;">
+                  <span id="responsive_logo_name_after">Literaryeye.com</span>
+                </div>
+                <div class="sidebar-content">
+                <ul class="lists">
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('home')">Home</a>
+                </li>
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('poetry')">Poetry</a>
+                </li>
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('creation')">Creation</a>
+                </li>
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('grammer')">Grammer</a>
+                </li>
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('book')">Book</a>
+                </li>
+                <li class="list">
+                    <a href="#" class="nav-link" onclick="loadContent('about')">About Us</a>
+                </li>
+              </ul>
+              <div class="bottom-cotent">
+                <li class="list">
+                  <a href="mailto:supravatjana959@gmail.com" class="nav-link">
+                    <span class="link">Contact Us</span>
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div>
+                <img src="src\img\logo_white.png" alt="logo" class="logo_responsive">
+            </div>
+          </div>
+        </div>
+        <section class="overlay"></section>
+    </div>
+    <!-- RESPONSIVE HEADER END -->
+    <header>
+        <div class="logo">
+            <a href="#" onclick="loadContent('home')" style="text-decoration: none;"><img src="src\img\logo_white.png" alt="Logo"></a>   
+            <span><a href="#" onclick="loadContent('home')" style="text-decoration: none;">literaryeye.com</a></span>
+        </div>
+        <nav id="navMenu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul>
+                <li><a href="#" onclick="loadContent('home')">Home</a></li>
+                <li><a href="#" onclick="loadContent('poetry')">Poetry</a></li>
+                <li><a href="#" onclick="loadContent('creation')">Creation</a></li>
+                <li><a href="#" onclick="loadContent('grammer')">Grammer</a></li>
+                <li><a href="#" onclick="loadContent('book')">Book</a></li>
+                <li><a href="#" onclick="loadContent('about')">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <!-- Content will be dynamically loaded here using JavaScript -->
+    </main>
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to Top">&#9650;</button>
+    <script src="script.js"></script>
+</body>
+</html>
